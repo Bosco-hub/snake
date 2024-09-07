@@ -1,8 +1,8 @@
 from turtle import Turtle
 X_POSITION = [0,-20,-40]
+
 MOVE_DISTANCE = 20
 class Snake:
-
     def __init__(self):
         self.snake_body = []
         self.create_snake()
@@ -22,3 +22,10 @@ class Snake:
             new_Y = self.snake_body[seg_num - 1].ycor()
             self.snake_body[seg_num].goto(new_X, new_Y)
         self.snake_body[0].forward(MOVE_DISTANCE)
+
+    # To move +30 left -30 Right
+    def left(self):
+        self.snake_body[0].left(90)
+    def right(self):
+        self.snake_body[0].right(90)
+
